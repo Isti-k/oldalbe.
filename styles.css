@@ -1,0 +1,107 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+header, nav, article, aside, footer {
+    border:1px solid white;
+    padding: 10px;
+}
+
+body{
+    background-image: url(image/marble.jpg);
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+main{
+    background-image: url(image/ferrari.jpg);
+    display: grid;
+    grid-template-columns: 100px 3fr 1fr;
+    grid-template-rows: 100px 50px auto 50px;
+    grid-template-areas: 
+        "h  h  h"
+        "n  n  n"
+        "b  a  j"
+        "f  f  f";
+}
+header{
+    grid-area: h;
+    color: white;
+}
+nav{
+    grid-area: n;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+    list-style-type: none;
+    margin: auto;
+}
+article{
+    grid-area: a;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5px;
+    border: 1px;
+    width: 100%;
+}
+aside#bal{
+    grid-area: b;
+    color: white;
+}
+aside#jobb{
+    grid-area: j;
+    color: white;
+}
+footer{
+    grid-area: f;
+    color: white;
+}
+@media screen and (max-width: 650px) {
+    body {
+      width: 100%;
+      font-size: 2rw;
+    }
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto auto auto 50px;
+        grid-template-areas: 
+            "h h"
+            "n n"
+            "a j"
+            "b b"
+            "f f";
+    }
+  }
+  @media screen and (max-width: 450px) {
+    body {
+      width: 100%;
+      font-size: 5rw;
+    }
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto auto auto 50px;
+        grid-template-areas: 
+            "h"
+            "n"
+            "a"
+            "j"
+            "b"
+            "f";
+    }
+  }
+.kep img{
+    margin: auto;
+    width: 100%;
+    padding: 1px;
+}
+article div{
+    padding: 1px;
+    border: 1px solid white;
+    
+}
+
